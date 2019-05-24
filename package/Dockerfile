@@ -1,7 +1,8 @@
-FROM openebs/jiva:base-xenial-20180417
+#FROM openebs/jiva:base-xenial-20180417
 #RUN apt-get update && apt-get install -y kmod curl nfs-common fuse \
 #        libibverbs1 librdmacm1 libconfig-general-perl libaio1 \
 #        && rm -rf /var/lib/apt/lists/*
+FROM arm64v8/ubuntu
 RUN apt-get update && apt-get install -y curl \
     && rm -rf /var/lib/apt/lists/*
 
