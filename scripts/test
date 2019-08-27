@@ -9,5 +9,5 @@ PACKAGES="$(find . -name '*.go' | xargs -I{} dirname {} | sort -u | grep -Ev '(.
 
 echo Packages: ${PACKAGES}
 
-[ "${ARCH}" == "amd64" ] && RACE=-race
+[ "${ARCH}" == "arm64" ] && RACE=-race
 go test ${RACE} -cover -tags="test qcow" ${PACKAGES}
